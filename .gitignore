@@ -1,0 +1,14 @@
+*.aux
+*.log
+*.pdf
+*.gz
+*.png
+*.jpg
+*.bcf
+*.xml
+*.bbl
+*.blg
+
+test/
+
+.DS_Store

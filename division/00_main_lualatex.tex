@@ -1,0 +1,28 @@
+\documentclass[a4paper,11pt]{ltjsarticle}
+% 子ファイルで参考文献を引用しつつ，　　子ファイル単体でコンパイルするための技術
+% 参考: https://qiita.com/yjjtw/items/575d6528bb799b93d010
+% ----- 仕掛け 開始 -----
+\newcommand{\MainFile}{MainFile}
+% ----- 仕掛け 終了 -----
+
+\input{0_preamble}
+
+\title{The title}
+\author{Tomoyo Daidoji \thanks{Tomoeda JHS}}
+\date{\today}
+
+\begin{document}
+\maketitle
+% 目次の出力
+\tableofcontents
+
+\input{1_sec_1}
+
+\input{2_sec_2}
+
+
+% 参考文献
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,51 @@
+% LuaTeX-ja設定
+\usepackage[no-math, deluxe,expert, hiragino-pron,jis2004]{luatexja-preset}
+% フォント
+\usepackage[math]{iwona}
+\usepackage[scale=0.9]{roboto}
+% 基本とドライバ関連
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{float} % 図を[H] で固定するためにはこれが必要
+\usepackage{grffile}
+\usepackage[table]{xcolor}
+\usepackage{booktabs} % table で \toprule \midrule...とか使うのにはこれが必要
+\usepackage{tikz}
+\usepackage{textcomp}
+% 数式系パッケージ
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage{braket}
+% 化学式
+\usepackage[version=3]{mhchem}
+% ハイパーリンクを貼る
+\usepackage[
+	luatex,
+	pdfencoding=auto,
+	%hidelinks % ハイパーリンクの色を消す % 色が欲しい時はコメントアウトする
+]{hyperref}
+% 疑似コードを載せるため
+%\usepackage{algorithm, algorithmicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+% 引用で，　[1,2,3,4]ではなく[1-4]にする
+\usepackage{cite}
+% renewcommand をまとめて書くセクション
+% argmaxを書きたい
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+% キャプションを 「図」 ではなく `Fig' にする
+\renewcommand{\figurename}{Fig.}
+% 参考文献の題字を英語で出力するための処置
+\renewcommand{\refname}{Reference}
+% 目次の題字を英語で出力するための処置
+\renewcommand{\contentsname}{Table of Contents}
+% アブストラクトの題字を英語で出力するための処置
+\renewcommand{\abstractname}{Abstract:}
